@@ -1,0 +1,131 @@
+.camera-upload-container {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.capture-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 30px;
+}
+
+@media (min-width: 500px) {
+  .capture-options {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.btn-primary, .btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-light));
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px var(--rose-gold-muted);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 110, 121, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.divider-text {
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.camera-view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-feed {
+  width: 100%;
+  height: calc(100% - 70px);
+  object-fit: cover;
+  transform: scaleX(-1); /* mirror effect */
+}
+
+.camera-controls {
+  height: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.btn-cancel {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  opacity: 0.8;
+}
+
+.btn-cancel:hover {
+  opacity: 1;
+}
+
+.btn-capture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--rose-gold-light);
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.btn-capture:active {
+  transform: scale(0.9);
+}
